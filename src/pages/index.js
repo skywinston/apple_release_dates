@@ -1,19 +1,24 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import styled from 'styled-components'
+import GlobalStyles from '../styles/global'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
+const PageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`
+
+const Heading = styled.h1`
+  font-size: 4rem;
+  line-height: 5.4rem;
+`
 
 const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <PageContainer>
+    <Heading>Good things come to those who wait.</Heading>
+    <GlobalStyles />
+  </PageContainer>
 )
 
 export default IndexPage
